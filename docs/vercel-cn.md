@@ -1,8 +1,6 @@
 # Vercel 的使用说明
 
 ## 如何新建项目
-当你从 Github fork 本项目之后，需要重新在 Vercel 创建一个全新的 Vercel 项目来重新部署，你需要按照下列步骤进行。
-
 ![vercel-create-1](./images/vercel/vercel-create-1.jpg)
 1. 进入 Vercel 控制台首页；
 2. 点击 Add New；

@@ -107,7 +107,7 @@ body {
   touch-action: pan-x pan-y;
 
   @media only screen and (max-width: 600px) {
-    background-color: var(--second);
+    background: linear-gradient(to bottom, #833ab4, #000);
   }
 }
 

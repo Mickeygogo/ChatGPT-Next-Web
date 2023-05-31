@@ -46,7 +46,7 @@
       cursor: pointer;
 
       &-selected {
-        background-color: var(--second);
+        background: linear-gradient(to bottom, #833ab4, #000);
       }
 
       &:not(:last-child) {
