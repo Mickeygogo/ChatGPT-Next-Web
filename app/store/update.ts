@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { FETCH_COMMIT_URL, StoreKey } from "../constant";
+import { StoreKey } from "../constant";
 import { api } from "../client/api";
 import { showToast } from "../components/ui-lib";
 
@@ -52,17 +52,6 @@ export const useUpdateStore = create<UpdateStore>()(
         set(() => ({
           lastUpdate: Date.now(),
         }));
-        try {
-          const data = await (await fetch(FETCH_COMMIT_URL)).json();
-          const remoteCommitTime = data[0].commit.committer.date;
-          const remoteId = new Date(remoteCommitTime).getTime().toString();
-          set(() => ({
-            remoteVersion: remoteId,
-          }));
-          console.log("[Got Upstream] ", remoteId);
-        } catch (error) {
-          console.error("[Fetch Upstream Commit Id]", error);
-        }
       },
 
       async updateUsage(force = false) {
